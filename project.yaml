@@ -1,0 +1,19 @@
+name: fabric-lakehouse-sales-analytics
+owner: Engr-InamUllah
+status: scaffold
+stack: 'Microsoft Fabric, OneLake, Spark, Power BI, DAX'
+pipeline:
+  - ingest
+  - clean
+  - model
+  - measure
+  - visualize
+quality_gates:
+  - schema_validation
+  - null_thresholds
+  - duplicate_detection
+  - freshness_check
+  - automated_tests
+security:
+  secrets: environment_or_secret_store
+  least_privilege: true
