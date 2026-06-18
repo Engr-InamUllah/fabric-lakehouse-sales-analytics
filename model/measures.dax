@@ -1,0 +1,4 @@
+Total Revenue := SUM ( Sales[revenue] )
+Total Units := SUM ( Sales[units] )
+Revenue YTD := TOTALYTD ( [Total Revenue], 'Date'[Date] )
+Revenue YoY % := DIVIDE ( [Total Revenue] - CALCULATE ( [Total Revenue], SAMEPERIODLASTYEAR('Date'[Date]) ), CALCULATE ( [Total Revenue], SAMEPERIODLASTYEAR('Date'[Date]) ) )
